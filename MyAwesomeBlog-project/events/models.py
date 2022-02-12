@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Event(models.Model):
+    title = models.CharField(max_length=300, name="Title", default="Title")
+    image = models.ImageField(upload_to='event_images/' ,name="Image")
+    text = models.CharField(max_length=300, name="Text", default="Text")
